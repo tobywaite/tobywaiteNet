@@ -1,0 +1,48 @@
+$container-width: 870px;
+$section-size: $container-width/3;
+
+#container {
+	header {
+	}
+	#content {
+		width: $container-width + 20px;
+		section {
+			border: 1px solid black;
+			margin: 1px;
+		}
+
+		#blog{
+			width: $section-size*2;
+			height: $section-size;
+			float: left;
+		}
+		#github{
+			width: $section-size;
+			height: $section-size;
+			float: left;
+		}
+		#about{
+			width: $section-size;
+			height: $section-size*2;
+			float: left;
+		}
+		#flickr{
+			width: $section-size*2;
+			height: $section-size;
+			float: left;
+		}
+		#twitter{
+			width: $section-size;
+			height: $section-size;
+			float: left;
+		}
+		#lastfm{
+			width: $section-size;
+			height: $section-size;
+			float: left;
+		}
+		
+	}
+	footer {
+	}
+}
