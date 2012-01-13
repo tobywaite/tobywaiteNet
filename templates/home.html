@@ -2,26 +2,104 @@
 	<head>
 		<title>Toby Waite</title>
 		<link href="../static/main.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="../static/reset.css" media="all" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<div id='container'>
 			<header>
-				<h1>Toby Waite</h1>
-				<img id='header_trace' src='static/img/header_trace.png' />
-				<h2>{ this is my website }</h2>
+				<div id='trace-left-circle'>
+				</div>
+				<div id='trace-bottom-line'>
+					<h1>Toby Waite</h1>
+				</div>
+				<div id='trace-angle-line'>
+				</div>
+				<div id='trace-top-line'>
+					<h2>{ this is my website }</h2>
+				</div>
+				<div id='trace-right-circle'>
+				</div>
 			</header>
 			<div id='content'>
 				<section id='blog'>
+					<img class='source-badge' src='../static/img/badge-blog.png'/>
+					<a class='title-link' href='http://ybot.posterous.com/<post>'><h2 class='section-title'>Blog Post Title Here</h2></a>
+					<h3 class='section-date'>01/07/2012, 16:21</h3>
+					<div class='section-content'>
+						<p>Blah blah text</p>
+					</div>
+					<a class='more-link' href='http://ybot.posterous.com'>More at Posterous...</a>
+					<span class='change-content-link'>
+						<a class='older-link' href='/blog/<entry>/older'>Older</a> | <a class='newer-link' href='/blog/<entry>/newer'>Newer</a>
+					</span>
 				</section>
 				<section id='github'>
+					<img class='source-badge' src='../static/img/badge-github.png'/>
+					<a class='title-link' href='github.com/tobywaite/<commit>'><h2 class='section-title'>Github Commit Title</h2></a>
+					<h3 class='section-date'>01/07/2012, 16:21</h3>
+					<div class='section-content'>
+						<p>Blah blah text</p>
+					</div>
+					<a class='more-link' href='http://github.com/tobywaite'>More at Github...</a>
+					<span class='change-content-link'>
+						<a class='older-link' href='/blog/<entry>/older'>Older</a> | <a class='newer-link' href='/blog/<entry>/newer'>Newer</a>
+					</span>
 				</section>
 				<section id='about'>
+					<img id='self-photo' src='../static/img/about-selfshot.jpg'/>
+					<div id='about-content'>
+						<p>I'm Toby Waite, just another web developer with a website.</p>
+						<p>More of me around the web: <p>
+					</div>
+					<div id='about-links'>
+						<a href='facebook.com/tobywaite'><img class='social-badge' src='../static/img/badge-facebook.png'/></a>
+						<a href='plus.google.com/tobywaite'><img class='social-badge' src='../static/img/badge-gplus.png'/></a>
+						<a href='linkedin.com/tobywaite'><img class='social-badge' src='../static/img/badge-linkedin.png'/></a>
+						<a href='twitter.com/tobywaite'><img class='social-badge' src='../static/img/badge-twitter.png'/></a>
+						<a href='github.com/tobywaite'><img class='social-badge' src='../static/img/badge-github.png'/></a>
+						<a href='`lastfm.com/thebrokenfish'><img class='social-badge' src='../static/img/badge-lastfm.png'/></a>
+						<a href='flickr.com/tobywaite'><img class='social-badge' src='../static/img/badge-flickr.png'/></a>
+						<a href='ybot.posterous.com/'><img class='social-badge' src='../static/img/badge-blog.png'/></a>
+					</div>
 				</section>
 				<section id='flickr'>
+					<img class='source-badge' src='../static/img/badge-flickr.png'/>
+					<a href='http://flickr.com/photos/tobywaite/<photo>'><h2 class='section-title'>Photo Title Here</h2></a>
+					<h3 class='section-date'>01/07/2012, 16:21</h3>
+					<div class='section-content'>
+						<img src="http://placekitten.com/500/125"/>
+					</div>
+					<a class='more-link' href='http://flickr.com/tobywaite'>More at Flickr...</a>
+					<span class='change-content-link'>
+						<a class='older-link' href='/blog/<entry>/older'>Older</a> | <a class='newer-link' href='/blog/<entry>/newer'>Newer</a>
+					</span>
 				</section>
 				<section id='twitter'>
+					<img class='source-badge' src='../static/img/badge-twitter.png'/>
+					<a class='title-link' href='http://www.twitter.com/tobywaite/<tweet>'><h2 class='section-title'>@tobywaite:</h2></a>
+					<h3 class='section-date'>01/07/2012, 16:21</h3>
+					<div class='section-content'>
+						<p>Blah blah text</p>
+					</div>
+					<a class='more-link' href='http://twitter.com/tobywaite'>More at Twitter...</a>
+					<span class='change-content-link'>
+						<a class='older-link' href='/blog/<entry>/older'>Older</a> | <a class='newer-link' href='/blog/<entry>/newer'>Newer</a> 
+					</span>
 				</section>
 				<section id='lastfm'>
+					<img class='source-badge' src='../static/img/badge-lastfm.png'/>
+					<a class='title-link' href='<lastfm-activity>'><h2 class='section-title'>Song Title Here</h2></a>
+					<h3 class='section-date'>01/07/2012, 16:21</h3>
+					<div class='section-content'>
+						<p>EMA</p>
+						<p>Past Life Martyred Saints</p>
+						<img class='album-cover' src='<album-cover-url>'/>
+						<p>California</p>
+					</div>
+					<a class='more-link' href='http://last.fm'>More at Last.FM...</a>
+					<span class='change-content-link'> 
+						<a class='older-link' href='/blog/<entry>/older'>Older</a> | <a class='newer-link' href='/blog/<entry>/newer'>Newer</a>
+					</span>
 				</section>
 			</div>
 			<footer>
@@ -31,3 +109,4 @@
 			</footer>
 		</div>
 </html>
+

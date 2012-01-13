@@ -1,48 +1,184 @@
-$container-width: 870px;
-$section-size: $container-width/3;
+$bg-grey: #777;
 
+@font-face {
+	font-family: 'EBGaramondRegular';
+	src: url('font/EBGaramond-webfont.eot');
+	src: url('font/EBGaramond-webfont.eot?#iefix') format('embedded-opentype'),
+	url('font/EBGaramond-webfont.woff') format('woff'),
+	url('font/EBGaramond-webfont.ttf') format('truetype'),
+	url('font/EBGaramond-webfont.svg#EBGaramondRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+ }
+
+ @font-face {
+	font-family: 'BrawlerRegular';
+	src: url('font/Brawler-webfont.eot');
+	src: url('font/Brawler-webfont.eot?#iefix') format('embedded-opentype'),
+	url('font/Brawler-webfont.woff') format('woff'),
+	url('font/Brawler-webfont.ttf') format('truetype'),
+	url('font/Brawler-webfont.svg#Brawler') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	background-color: $bg-grey;
+	background-image: url("../static/img/circuit-trace-gradient.png");
+	background-repeat: repeat-x;
+}
 #container {
+	$container-width: 920px;
+	$trace-height: 125px;
+	$trace-circle-width: 25px;
+	$trace-angle-width: 84px;
+	$trace-bottom-width: 350px;
+
+	width: $container-width;
+	margin: 0 auto;
+
 	header {
+		color: white;
+		font-family: 'BrawlerRegular', 'Arial';
+		
+		h1 {
+			font-size: 60px;
+			margin-top: 30px;
+			margin-left: 10px;
+		}
+		h2 {
+			font-size: 30px;
+			margin-top: 60px;
+			margin-left: 40px;
+		}
+		div{
+			float: left;
+		}
+		#trace-left-circle {
+			background-image: url("../static/img/circuit-trace-circle-left.png");
+			background-repeat: none;
+			height: $trace-height;
+			width: $trace-circle-width;
+		}
+		#trace-bottom-line {
+			background-image: url("../static/img/circuit-trace-line-bottom.png");
+			background-repeat: repeat-x;
+			height: $trace-height;
+			width: $trace-bottom-width;
+		}
+		#trace-angle-line {
+			background-image: url("../static/img/circuit-trace-angle.png");
+			height: $trace-height;
+			width: $trace-angle-width;
+		}
+		#trace-top-line {
+			background-image: url("../static/img/circuit-trace-line-top.png");
+			background-repeat: repeat-x;
+			height: $trace-height;
+			width: $container-width - 2*$trace-circle-width - $trace-bottom-width - $trace-angle-width;
+		}
+		#trace-right-circle{
+			background-image: url("../static/img/circuit-trace-circle-right.png");
+			height: $trace-height;
+			width: $trace-circle-width;
+			float: right;
+		}
 	}
 	#content {
-		width: $container-width + 20px;
-		section {
-			border: 1px solid black;
-			margin: 1px;
+		$section-width: $container-width/3;
+		$section-height: $container-width/3 - 5px;
+		$section-margin: 10px;
+		
+		margin: 0 auto;
+		width: $container-width;
+
+		font-size: 22px;
+		font-family: 'EBGaramondRegular';
+
+		a {
+			color: black;
 		}
 
+		section {
+			margin: $section-margin;
+			background-color: white;
+			border-radius: 25px;
+			box-shadow: 5px 5px 5px #333;
+			-moz-box-shadow: 5px 5px 5px #333;
+			-webkit-box-shadow: 5px 5px 5px #333;
+
+			.source-badge {
+				float: left;
+				height: 40px;
+				width: 40px;
+				margin: 15px;
+			}
+			.section-title {
+				font-size: 28px;
+				margin-top: 15px;
+			}
+			.section-date {
+			}
+			.section-content {
+				clear: both;
+				margin: 25px;
+			}
+			.change-content-link {
+				float: right;
+			}
+		}
 		#blog{
-			width: $section-size*2;
-			height: $section-size;
+			width: 2*$section-width - 2*$section-margin;
+			height: $section-height;
 			float: left;
 		}
 		#github{
-			width: $section-size;
-			height: $section-size;
+			width: $section-width - 2*$section-margin;
+			height: $section-height;
 			float: left;
 		}
 		#about{
-			width: $section-size;
-			height: $section-size*2;
+			width: $section-width - 2*$section-margin;
+			height: 2*$section-height + 2*$section-margin;
 			float: left;
+
+			img {
+				margin-top: 25px;
+				margin-bottom: 15px;
+			}
+			text-align: center; // aligns the image to the center.
+
+			#about-content{
+				text-align: left;
+				margin: 0px 15px;
+				p {
+					margin-top: 10px;
+				}
+			}
+
+			.social-badge {
+				width: 25px;
+				height: 25px;
+			}
 		}
 		#flickr{
-			width: $section-size*2;
-			height: $section-size;
+			width: 2*$section-width - 2*$section-margin;
+			height: $section-height;
 			float: left;
 		}
 		#twitter{
-			width: $section-size;
-			height: $section-size;
+			width: $section-width - 2*$section-margin;
+			height: $section-height;
 			float: left;
 		}
 		#lastfm{
-			width: $section-size;
-			height: $section-size;
+			width: $section-width - 2*$section-margin;
+			height: $section-height;
 			float: left;
 		}
-		
 	}
 	footer {
+		clear: both;
+		text-align: center;
 	}
 }
